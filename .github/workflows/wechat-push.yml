@@ -24,10 +24,10 @@ jobs:
           
       - name: Update main.py with secrets
         run: |
-          sed -i 's/^appID = ""/appID = "${{ secrets.WECHAT_APP_ID }}"/' main.py
-          sed -i 's/^appSecret = ""/appSecret = "${{ secrets.WECHAT_APP_SECRET }}"/' main.py
-          sed -i 's/^openId = ""/openId = "${{ secrets.WECHAT_OPEN_ID }}"/' main.py
-          sed -i 's/^weather_template_id = ""/weather_template_id = "${{ secrets.WECHAT_WEATHER_TEMPLATE_ID }}"/' main.py
+          sed -i 's/^appID = ""/appID = "${{ secrets.APP_ID }}"/' main.py
+          sed -i 's/^appSecret = ""/appSecret = "${{ secrets.APP_SECRET }}"/' main.py
+          sed -i 's/^openId = ""/openId = "${{ secrets.OPEN_ID }}"/' main.py
+          sed -i 's/^weather_template_id = ""/weather_template_id = "${{ secrets.TEMPLATE_ID }}"/' main.py
           sed -i 's/^timetable_template_id = ""/timetable_template_id = "${{ secrets.WECHAT_TIMETABLE_TEMPLATE_ID }}"/' main.py
           
       - name: Run push script
